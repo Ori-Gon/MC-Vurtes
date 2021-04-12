@@ -4,20 +4,50 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
 .editor {
     padding: 15px;
-    margin: auto;
-    margin-top: 50px;
-    background-color: #2f3542;
-    height: 500px;
-    min-width: 10px;
-    max-width: 400px;
+    padding-left: 25px;
+    background-color: #20232b;
+    align-items: center;
+    height: 95%;
+    width: 100%;
     overflow: auto;
-    border-radius: 2%;
     color: #ffffff;
     font-family: "Fira Mono";
+    white-space: nowrap;
+    outline: 0px solid transparent;
 }
 
 .editor>div {
+    background-color: #20232b;
+}
+
+.Toolbar {
     background-color: #2f3542;
+    height: 100%;
+    width: 70px;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #20232b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #424c5f;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #55637c;
 }
