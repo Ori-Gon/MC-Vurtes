@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-    <script src="main.js"></script>
     <title>MC-Cipher</title>
 </head>
 <body>
@@ -15,8 +14,8 @@
         <span style="font-size: 3em; color: #ffffff; background-color: #2f3542;">
             <i class="far fa-file-code" style="margin: 15px; background-color: #2f3542;"></i>
         </span>
-        <span style="font-size: 3em; color: #ffffff; background-color: #2f3542;">
-            <i class="far fa-file-code" style="margin: 15px; background-color: #2f3542;"></i>
+        <span style="font-size: 2.5em; color: #ffffff; background-color: #2f3542;">
+            <i class="fas fa-search" style="margin: 13px; background-color: #2f3542;"></i>
         </span>
         <span style="font-size: 3em; color: #ffffff; background-color: #2f3542;">
             <i class="far fa-file-code" style="margin: 15px; background-color: #2f3542;"></i>
@@ -28,7 +27,9 @@
             <i class="far fa-file-code" style="margin: 15px; background-color: #2f3542;"></i>
         </span>
     </div>
-    <div class="editor" contenteditable="true" spellcheck="false"> 
+    <div id="editor" contenteditable="true" spellcheck="false" data-gramm_editor="false"> 
+        <p>My mother has <span style="color:blue">blue</span> eyes.</p>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

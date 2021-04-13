@@ -1,5 +1,5 @@
-"Syntax": [
-    "Commands": [
+{
+    "Commands": {
         "particle": {
             "Name": "Particle",
             "Desc": "Summons a particle at a location",
@@ -10,8 +10,8 @@
             "Desc": "Execute a commmand on behave of an entity(s)",
             "Syntax": "execute 'Target' 'Location' 'Command'"
         }
-    ],
-    "Targets": [
+    },
+    "Targets": {
         "particle": {
             "Name": "Particle",
             "Desc": "Summons a particle at a location",
@@ -22,5 +22,5 @@
             "Desc": "Execute a commmand on behave of a entity",
             "Syntax": "execute 'Target' 'Location' 'Command'"
         }
-    ]
-]
+    }
+}
