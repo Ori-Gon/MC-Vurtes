@@ -19,7 +19,7 @@ html, body {
     height: 95%;
     width: 100%;
     overflow: auto;
-    color: #ffe986;
+    color: #a1a1a1;
     font-family: "Fira Mono";
     white-space: nowrap;
     outline: 0px solid transparent;
@@ -33,6 +33,19 @@ html, body {
     background-color: #2f3542;
     height: 100%;
     width: 70px;
+}
+
+.btn {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: 0px solid transparent;
+    color: #7e8c9c;
+}
+
+.btn :hover {
+    cursor: pointer;
+    color: #ffffff;
 }
 
 ::-webkit-scrollbar {
