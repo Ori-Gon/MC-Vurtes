@@ -30,6 +30,8 @@ function FileChange() {
 };
 
 function PopupDisplay(IdOfPopup) {
+    document.getElementById("Upload").style.display = "none";
+    document.getElementById("Download").style.display = "none";
     document.getElementById(IdOfPopup).style.display = "block";
 };
 
