@@ -30,13 +30,14 @@
         </div>
     </div>
     <Div class="InfoBar">
-        <div class="Pop-Up" style="top: 20px; width: 200px; height: 100px;" id="Upload">
-            <span style="color: #f36a6a; background-color: #3d444d;"> Warning: This Will Overwrite Your File </span>
-            <input type="file" class="input" onchange="FileChange()">
+        <div class="Info" id="Upload">
+            <span style="color: #f36a6a;" class="Info-Text"> Warning: This Will Overwrite Your File </span>
+            <input type="file" class="input" onchange="FileChange()" style="display: none;" id="Upload-Files">
+            <label for="Upload-Files" class="Info-btn">Import Files</label>
         </div>
-        <div class="Pop-Up" style="top: 100px; width: 200px; height: 100px;" id="Download">
+        <div class="Info" id="Download">
             <input type="text" class="input" id="FileName">
-            <button class="Pop-Up-btn" onclick="DownloadFile()">Download</button>
+            <button class="Info-btn" onclick="DownloadFile()">Download</button>
         </div>
     </Div>
     <code id="editor" contenteditable="true" spellcheck="false" data-gramm_editor="false"></code>
