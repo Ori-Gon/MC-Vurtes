@@ -19,7 +19,7 @@ html, body {
     height: 95%;
     width: 100%;
     overflow: auto;
-    color: #a1a1a1;
+    color: #cacaca;
     font-family: "Fira Mono";
     white-space: nowrap;
     outline: 0px solid transparent;
@@ -40,13 +40,36 @@ html, body {
     border: none;
     background: none;
     outline: 0px solid transparent;
-    color: #7e8c9c;
-    /*Trouble shooting Pages*/
+    color: #7c8a9c;
 }
 
 .btn :hover {
     cursor: pointer;
     color: #ffffff;
+}
+
+.Pop-Up {
+    display: none;
+    position: absolute;
+    left: 90px;
+    background-color: #3d444d;
+    text-align: center;
+    border-radius: 4%;
+}
+
+.Pop-Up-btn {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: 0px solid transparent;
+    color: #3d444d;
+    background-color: #7c8a9c;
+    border-radius: 7%;
+}
+
+.input {
+    align-content: center;
+    color: #cacaca;
 }
 
 ::-webkit-scrollbar {
