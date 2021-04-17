@@ -1,18 +1,26 @@
-document.getElementById("editor").addEventListener("input", function () {
+let Editor = document.getElementById('Editor');
+let ToolBar = document.getElementById('ToolBar');
+let InfoBar = document.getElementById("InfoBar");
+
+Editor.addEventListener("input", function () {
+    localStorage.setItem("Content", Editor.innerText);
 }, false);
+
+InfoBar.style.display = "none";
 
 function FileChange() {
     var reader = new FileReader();
     reader.readAsText(document.getElementById("Upload-Files").files[0], "UTF-8");
     reader.onload = function (evt) {
-        document.getElementById("editor").innerText = evt.target.result;
+        Editor.innerText = evt.target.result;
     }
     reader.onerror = function (evt) {
-        document.getElementById("editor").innerText = "error reading file";
+        Editor.innerText = "error reading file";
     }
 };
 
 function PopupDisplay(IdOfPopup) {
+    InfoBar.style.display = "block";
     document.getElementById("Upload").style.display = "none";
     document.getElementById("Download").style.display = "none";
     document.getElementById(IdOfPopup).style.display = "block";
@@ -20,7 +28,7 @@ function PopupDisplay(IdOfPopup) {
 
 function DownloadFile() {
     filename = document.getElementById("FileName").value;
-    text = document.getElementById('editor').innerText;
+    text = Editor.innerText;
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
@@ -32,3 +40,18 @@ function DownloadFile() {
 
     document.body.removeChild(element);
 };
+
+function LoadLocalFile(){
+    let OldContent = localStorage.getItem("Content");
+    Editor.innerText = OldContent;
+}
+
+Mousetrap.bind('ctrl+b', function(e) {
+    if (InfoBar.style.display == "none") {
+        InfoBar.style.display = "block";
+    }
+    else {
+        InfoBar.style.display = "none";
+    }
+    return false;
+});
