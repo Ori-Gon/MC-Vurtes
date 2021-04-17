@@ -8,32 +8,35 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="Imf.png">
     <script src="mousetrap.min.js"></script>
     <title>MC-Promethues</title>
 </head>
 <body onload="LoadLocalFile()">
-    <div class="Toolbar">
-        <div style="background-color: #2f3542;">
-            <button style="font-size: 3em; background-color: #2f3542;" class="btn" onclick="PopupDisplay('Upload')" aria-label="Import">
-                <i class="fas fa-file-upload" style="margin: 16px; background-color: #2f3542;"></i>
+    <div id="Toolbar">
+        <div style="background-color: var(--ToolBar-Background-Color);">
+            <button style="font-size: 3em;" class="btn">
+                <i class="fas fa-folder Icon" style="margin: 10px;"></i>
             </button>
-            <button style="font-size: 3em; background-color: #2f3542;" class="btn" onclick="PopupDisplay('Download')">
-                <i class="fas fa-file-download" style="margin: 16px; background-color: #2f3542;"></i>
+            <button style="font-size: 3em;" class="btn" onclick="PopupDisplay('Upload')">
+                <i class="fas fa-file-upload Icon" style="margin: 16px;"></i>
             </button>
-            <button style="font-size: 3em; background-color: #2f3542;" class="btn">
-                <i class="fas fa-folder" style="margin: 10px; background-color: #2f3542;"></i>
+            <button style="font-size: 3em;" class="btn" onclick="PopupDisplay('Download')">
+                <i class="fas fa-file-download Icon" style="margin: 16px;"></i>
             </button>
-            <span style="font-size: 2.5em; background-color: #2f3542;" class="btn">
-                <i class="fas fa-search" style="margin: 13px; background-color: #2f3542;"></i>
+            <span style="font-size: 2.5em;" class="btn">
+                <i class="fas fa-search Icon" style="margin: 13px;"></i>
             </span>
-            <span style="font-size: 3em; background-color: #2f3542;" class="btn">
-                <i class="fas fa-sliders-h" style="margin: 10px; background-color: #2f3542;"></i>
+            <span style="font-size: 3em;" class="btn">
+                <i class="fas fa-sliders-h Icon" style="margin: 10px;"></i>
             </span>
         </div>
     </div>
     <Div id="InfoBar">
         <div class="Info" id="Upload">
-            <span style="color: #f36a6a;" class="Info-Text"> Warning: This Will Overwrite Your File </span>
+            <span class="Info-Warning-Text"> Warning: This Will Overwrite Your File </span>
             <input type="file" class="input" onchange="FileChange()" style="display: none;" id="Upload-Files">
             <label for="Upload-Files" class="Info-btn">Import File</label>
         </div>
