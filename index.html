@@ -12,24 +12,24 @@
       type="image/png" 
       href="Imf.png">
     <script src="mousetrap.min.js"></script>
-    <title>MC-Promethues</title>
+    <title>MC-Vurtes</title>
 </head>
-<body onload="LoadLocalFile()">
+<body onload="LoadLocalFile(); LoadTheme()">
     <div id="Toolbar">
         <div style="background-color: var(--ToolBar-Background-Color);">
-            <button style="font-size: 3em;" class="btn">
+            <button style="font-size: 3em;" class="btn" title="Files">
                 <i class="fas fa-folder Icon" style="margin: 10px;"></i>
             </button>
-            <button style="font-size: 3em;" class="btn" onclick="PopupDisplay('Upload')">
+            <button style="font-size: 3em;" class="btn" onclick="PopupDisplay('Upload')" title="Import Files">
                 <i class="fas fa-file-upload Icon" style="margin: 16px;"></i>
             </button>
-            <button style="font-size: 3em;" class="btn" onclick="PopupDisplay('Download')">
+            <button style="font-size: 3em;" class="btn" onclick="PopupDisplay('Download')" title="Download Files">
                 <i class="fas fa-file-download Icon" style="margin: 16px;"></i>
             </button>
-            <span style="font-size: 2.5em;" class="btn">
+            <span style="font-size: 2.5em;" class="btn" title="Find All (And Replace)">
                 <i class="fas fa-search Icon" style="margin: 13px;"></i>
             </span>
-            <span style="font-size: 3em;" class="btn">
+            <span style="font-size: 3em;" class="btn" title="Settings">
                 <i class="fas fa-sliders-h Icon" style="margin: 10px;"></i>
             </span>
         </div>
@@ -38,7 +38,7 @@
         <div class="Info" id="Upload">
             <span class="Info-Warning-Text"> Warning: This Will Overwrite Your File </span>
             <input type="file" class="input" onchange="FileChange()" style="display: none;" id="Upload-Files">
-            <label for="Upload-Files" class="Info-btn">Import File</label>
+            <label for="Upload-Files" class="Info-btn">Import Files</label>
         </div>
         <div class="Info" id="Download">
             <input type="text" class="input" id="FileName">

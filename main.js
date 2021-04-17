@@ -47,6 +47,17 @@ function LoadLocalFile(){
     Editor.innerText = OldContent;
 }
 
+function LoadTheme() {
+    var Root = document.querySelector(':root');
+    for (let index = 0; index < Object.keys(JSON.parse(localStorage.getItem("CustomTheme"))).length; index++) {
+        var Key = Object.keys(JSON.parse(localStorage.getItem("CustomTheme")))[index];
+        var KeyObject = JSON.parse(localStorage.getItem("CustomTheme"))[Key];
+        Root.style.setProperty(Key, KeyObject);
+    }
+    /*JSON.parse(localStorage.getItem("CustomTheme"))["--Editor-Text-Color"];
+    Object.keys(JSON.parse(localStorage.getItem("CustomTheme")))[0];*/
+}
+
 Mousetrap.bind('ctrl+b', function(e) {
     if (InfoBar.style.display == "none") {
         InfoBar.style.display = "block";
