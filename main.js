@@ -13,6 +13,7 @@ function FileChange() {
     reader.readAsText(document.getElementById("Upload-Files").files[0], "UTF-8");
     reader.onload = function (evt) {
         Editor.innerText = evt.target.result;
+        localStorage.setItem("Content", Editor.innerText);
     }
     reader.onerror = function (evt) {
         Editor.innerText = "error reading file";
